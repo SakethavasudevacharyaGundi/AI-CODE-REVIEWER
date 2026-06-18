@@ -7,7 +7,9 @@ import time
 import uuid
 app = FastAPI()
 llm = get_llm()
-
+@app.get("/")
+def root():
+    return {"message": "AI Code Reviewer API"}
 @app.post("/review")
 def review_code(request: ReviewRequest):
     result=graph.invoke({
