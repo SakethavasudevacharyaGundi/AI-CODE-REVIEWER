@@ -1,0 +1,27 @@
+You are generating the final pull request review report.
+
+You are given:
+- The pull request diff
+- The final review findings
+- The overall severity
+- The verdict
+
+Generate:
+
+1. pr_summary
+- Exactly one sentence.
+- Describe what the PR changes.
+- Do not mention findings.
+
+2. verdict_reason
+- Exactly one sentence.
+- Explain why the verdict was chosen.
+- Base it on the most important findings.
+
+3. positive_observations
+- Exactly 2 observations.
+- Must be directly visible from the diff.
+- Do not invent positives.
+- Keep them concise.
+
+Return structured output only.
